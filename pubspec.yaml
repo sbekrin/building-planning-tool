@@ -1,0 +1,9 @@
+name: planner
+version: 0.0.4
+author: Sergey Bekrin
+description: Client Application for Building Planner Service
+dependencies:
+  browser: any
+transformers:
+- $dart2js:
+    minify: true

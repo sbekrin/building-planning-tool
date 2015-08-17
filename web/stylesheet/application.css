@@ -1,0 +1,151 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	height: 100%;
+	width: 100%;
+}
+
+	#application-view {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	
+		/*
+		 *	Menu
+		 */
+		menu {
+			z-index: 5 !important;
+		}
+	
+		/*
+		 *	Tools
+		 */
+		#tools {
+			padding-right: 8px;
+			padding-left: 8px;
+			width: 58px;
+		}
+		
+			#tools .gui-toolbox-title {
+				text-align: center;
+			}
+	
+			#tools .gui-button {
+				/*border-color: #ddd;*/
+				border-radius: 0;
+				font-size: 20px;
+				margin-top: -1px;
+				height: 42px;
+				width: 42px;
+				padding: 0;
+			}
+			
+			#tools .gui-button:first-of-type {
+				border-radius: 2px 2px 0 0;
+			}
+			
+			#tools .gui-button:last-of-type {
+				border-radius: 0 0 2px 2px;
+				margin-bottom: 0;
+			}
+		
+		/*
+		 *	Layers
+		 */
+		#layers {
+			width: 260px;
+		}
+		
+			#layers .gui-multilist {
+				background: #fcfcfc;
+			}
+		
+			#layers .gui-multilist-item {
+				font-size: 13px;
+			}
+			
+			#layers .gui-button {
+				margin-left: -1px;
+			}
+			
+			#layers .gui-button:first-of-type {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+				margin-left: 0;
+			}
+			
+			#layers .gui-button:last-of-type {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+			
+			#layers .gui-icon {
+				font-size: 16px;
+			}
+		
+		/*
+		 *	Editor
+		 */
+		#editor {
+			background: #fcfcfc;
+			overflow: hidden;
+			border: none;
+			height: 100%;
+			width: 100%;
+			z-index: 2;
+		}
+	
+		#editor .move {
+			cursor: move;
+		}
+		
+			#editor .gui-block {
+				background: none;
+			}
+		
+			#editor .editor-content {
+				box-shadow: 0 0 4rem rgba(0, 0, 0, .2);
+			}
+			
+				#editor div {
+					position: absolute;
+					overflow: hidden;
+					height: 100%;
+					width: 100%;
+				}
+				
+				/* Grid */
+				#editor .editor-content-grid {
+					z-index: 1;
+				}
+				
+					#editor .editor-content-grid .line {
+						fill: #bbb;
+						fill-opacity: .4;
+					}
+			
+				/* Preview */
+				#editor .editor-content-preview {
+					z-index: 0;
+				}
+				
+					#editor .editor-content-preview canvas {
+						position: absolute;
+					}
+				
+				/* Layers */
+				#editor .editor-content-layers {
+					z-index: 2;
+				}
+				
+					#editor .editor-content-layers .editable-canvas-wrap {
+						display: none;
+					}
+				
+					#editor .editor-content-layers .editable-canvas-wrap.active {
+						display: block;
+					}
+			

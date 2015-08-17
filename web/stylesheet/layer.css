@@ -1,0 +1,145 @@
+/*
+ *	NOTICE:
+ *
+ *	This is svg-related stylsheet,
+ *	No regular CSS rules are allowed.
+ */
+
+/* Ghost point
+svg .ghost-point {
+	stroke-width: 6;
+	stroke: #999;
+	fill: #ccc;
+}
+*/
+
+/*
+ * Common
+ */
+svg .bounding-box {
+	stroke: red;
+	fill: none;
+}
+
+svg text {
+	dominant-baseline: middle;
+	text-anchor: middle;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	fill: black;
+}
+
+/* Anchor point */
+svg g.anchor-point circle {
+	stroke-opacity: .8;
+	stroke-width: 6px;
+	stroke: black;
+	fill: gray;
+}
+
+svg g.anchor-point.canvas-object-selected circle {
+	stroke: #06c;
+	fill: white;
+}
+
+/* Wall ruler */
+svg g.wall-ruler text {
+	
+}
+
+	svg g.wall-ruler line {
+		stroke-width: 1px;
+		stroke: #555;
+	}
+
+/* Wall */
+svg g.wall > line {
+	stroke-width: 6px;
+	stroke: black;
+}
+
+	svg g.wall.canvas-object-selected > line {
+		stroke: #06c;
+	}
+
+/* Ghost wall */
+svg g.ghost-wall > line {
+	stroke-dasharray: 4, 4;
+	stroke-width: 2px !important;
+	stroke: black;
+}
+
+/*
+ *	Floor
+ */
+svg g.floor path {
+	stroke: black;
+	opacity: .4;
+}
+
+svg g.floor text.floor-area {
+}
+
+	svg g.floor.canvas-object-selected path {
+		stroke: #000;
+		opacity: .6;
+	}
+
+/*
+ *	Door
+ */
+svg g.door line.door {
+	stroke-width: 6px;
+	stroke: #666;
+}
+
+	svg g.door.canvas-object-selected line.door {
+		stroke: #06c;
+	}
+
+svg g.door line.overlay {
+	stroke-width: 6px;
+	stroke: white;
+}
+	
+svg g.door path {
+	stroke-miterlimit: 10;
+	stroke-dasharray: 6;
+	stroke: black;
+	fill: none;
+}
+
+	svg g.door.canvas-object-selected path {
+		stroke: #06c;
+	}
+
+/*
+ *	Anchor protractor
+ */
+svg g.anchor-protractor path {
+	stroke-opacity: .5;
+	stroke-width: 1px;
+	stroke: black;
+	fill: none;
+}
+
+svg g.anchor-protractor text {
+	fill-opacity: .8;
+}
+
+/* Align */
+svg g.align line {
+	stroke-width: 2px;
+	stroke: #06c;
+}
+
+/*
+ *	Selection rectangle
+ */
+svg path.selection {
+	stroke-width: .5;
+	stroke: #06c;
+	fill-opacity: .1;
+	fill: #06c;
+}

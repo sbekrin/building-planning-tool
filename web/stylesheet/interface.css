@@ -1,0 +1,594 @@
+/*
+ *	Icons (svg2font via icomoon.io)
+ */
+@font-face {
+	font-family: 'icons';
+	src: url('../fonts/icons.eot');
+	src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/icons.svg#icons') format('svg'),
+		 url('../fonts/icons.woff') format('woff'),
+		 url('../fonts/icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.gui-icon {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.gui-icon-zoom-reset:before {
+	content: "\e60d";
+}
+.gui-icon-zoom-out:before {
+	content: "\e60e";
+}
+.gui-icon-zoom-in:before {
+	content: "\e60f";
+}
+.gui-icon-floor:before {
+	content: "\e610";
+}
+.gui-icon-wall:before {
+	content: "\e600";
+}
+.gui-icon-undo:before {
+	content: "\e601";
+}
+.gui-icon-trash:before {
+	content: "\e602";
+}
+.gui-icon-save:before {
+	content: "\e603";
+}
+.gui-icon-redo:before {
+	content: "\e604";
+}
+.gui-icon-pencil:before {
+	content: "\e605";
+}
+.gui-icon-new:before {
+	content: "\e606";
+}
+.gui-icon-move:before {
+	content: "\e607";
+}
+.gui-icon-folder:before {
+	content: "\e608";
+}
+.gui-icon-duplicate:before {
+	content: "\e60a";
+}
+.gui-icon-cursor:before {
+	content: "\e60b";
+}
+.gui-icon-check:before {
+	content: "\e60c";
+}
+
+/*
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+}
+*/
+
+/*
+ *	Base block class
+ */
+.gui-block {
+	box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1),
+				0 0 1px rgba(0, 0, 0, .4);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #535353;
+	position: absolute;
+	z-index: 3;
+}
+
+	/*
+	 * Modals
+	 */
+	.gui-modal-box-wrapper {
+		background: rgba(0, 0, 0, .4);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 19;
+		left: 0;
+		top: 0;
+	}
+	
+		.gui-modal-box-wrapper .gui-modal-box {
+			box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
+			background-color: #535353;
+			margin-left: -150px;
+			margin-top: -50px;
+			position: absolute;
+			border-radius: 2px;
+			width: 300px;
+			left: 50%;
+			top: 50%;
+		}
+		
+			.gui-modal-box-wrapper .gui-modal-box-title {
+				padding: .5rem;
+				color: #aaa;
+			}
+			
+			.gui-modal-box-wrapper .gui-modal-box-content {
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1),
+							inset 0 -1px 1px rgba(0, 0, 0, .1);
+				border-bottom: 1px solid #333;
+				border-top: 1px solid #333;
+				background: #3f3f3f;
+				padding: 1rem .5rem;
+				color: #ddd;
+			}
+			
+			.gui-modal-box-wrapper .gui-modal-box-controls {
+				padding: .5rem;
+			}
+			
+				.gui-modal-box-wrapper .gui-modal-box-controls .gui-button {
+					margin-right: .2rem;
+				}
+
+	/*
+	 *	Widget
+	 */
+	.gui-widget {
+		border-radius: 2px;
+		font-size: .9rem;
+		padding: .5rem;
+	}
+	
+	.gui-widget-snapped-left {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		left: 0;
+	}
+	
+	.gui-widget-snapped-right {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		right: 0;
+	}
+	
+	.gui-widget-snapped-top {
+		/* border-top-right-radius: 0; */
+		border-top-left-radius: 0;
+		top: 162px;
+	}
+	
+	.gui-widget-snapped-bottom {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		bottom: 0;
+	}
+	
+		.gui-widget .gui-widget-title {
+			font-weight: normal;
+			color: #bbb;
+			padding: 0;
+		}
+		
+		.gui-widget .gui-widget-content {
+			margin-top: .5rem;
+		}
+	
+	/*
+	 *	Menu
+	 */
+	.gui-menu {
+		/*box-shadow: inset 0 4px 0 rgba(0, 0, 0, .1);*/
+		padding: 0 6px;
+		width: 100%;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		
+		overflow: hidden;
+		height: 36px;
+	}
+	
+	.gui-menu.visible {
+		overflow: hidden;
+		height: 180px;
+	}
+	
+		/* Shortcut item */
+		.gui-menu-shortcut {
+			position: static;
+			display: block;
+			float: left;
+		}
+		
+		.gui-menu-shortcut.gui-element-hovered {
+			background: rgba(256, 256, 256, .1);
+		}
+		
+		.gui-menu-shortcut.gui-element-pressed {
+			opacity: .4;
+		}
+		
+			.gui-menu-shortcut-icon {
+				padding: 0 .65rem;
+				line-height: 36px;
+				font-size: 1rem;
+				color: #eee;
+			}
+	
+		/* Section item */
+		.gui-menu-section {
+			position: static !important;
+			display: block;
+			float: left;
+		}
+		
+			.gui-menu-section-title {
+				text-decoration: none;
+				position: relative;
+				line-height: 36px;
+				padding: 0 .85rem;
+				display: block;
+				color: #ddd;
+				z-index: 4;
+			}
+			
+			.gui-menu-section.gui-element-hovered .gui-menu-section-title {
+				background: rgba(256, 256, 256, .105);
+			}
+			
+			.gui-menu-section.expanded .gui-menu-section-title {
+				background: white;
+				box-shadow: none;
+				color: #343434;
+				z-index: 6;
+			}
+			
+			.gui-menu-section.expanded .gui-menu-section-content {
+				display: block;
+				width: inherit;
+			}
+			
+			.gui-menu-section-content {
+				box-shadow: 0 0 .4rem rgba(0, 0, 0, .2);
+				border-radius: 2px;
+				position: absolute;
+				background: white;
+				height: 138px;
+				display: none;
+				z-index: 5;
+				right: 6px;
+				left: 6px;
+				top: 36px;
+			}
+			
+			.gui-menu-section:first-of-type .gui-menu-section-content {
+				border-top-left-radius: 0;
+			}
+			
+				.gui-menu-section-content-group {
+					margin-right: 3px;
+					position: relative;
+					padding: 3px;
+					height: inherit;
+					float: left;
+				}
+				
+					.gui-menu-section-content-group:after {
+						border-right: 1px solid rgba(0, 0, 0, .1);
+						position: absolute;
+						display: block;
+						height: 80%;
+						right: -2px;
+						content: '';
+						top: 10%;
+					}
+					
+					.gui-menu-section-content-group-label {
+						text-align: center;
+						position: absolute;
+						line-height: 24px;
+						display: block;
+						height: 24px;
+						clear: both;
+						color: #ccc;
+						width: 100%;
+						bottom: 0;
+					}
+			
+				.gui-menu-section-content-group-list {
+					padding-right: .1rem;
+					overflow: hidden;
+					overflow-y: scroll;
+					display: block;
+					height: inherit;
+					width: 100%;
+				}
+			
+				.gui-menu-section-content-group-item {
+					border: 1px solid transparent;
+					text-decoration: none;
+					border-radius: 1px;
+					line-height: 36px !important;
+					text-shadow: none;
+					padding: 0 1rem;
+					display: block;
+					height: 36px;
+					color: #333;
+					min-width: 120px;
+				}
+				
+				.gui-menu-section-content-group-item.vertical {
+					text-align: center;
+					min-width: 0;
+					padding: 1rem;
+					height: inherit;
+					float: left;
+					width: auto;
+				}
+				
+					.gui-menu-section-content-group-item .gui-input-number {
+						margin-top: 4px;
+						margin-left: 1rem;
+						float: right;
+					}
+				
+					.gui-menu-section-content-group-item.vertical .gui-menu-section-content-group-item-icon {
+						padding-top: .4rem;
+						font-size: 32px;
+						display: block;
+						margin: 0 auto;
+						width: auto;
+						padding: 0;
+					}
+				
+				
+				/* TODO: Remove important rules */
+				.gui-menu-section-content-group-item.gui-element-disabled,
+				.gui-menu-section-content-group-item.gui-element-disabled.gui-element-hovered {
+					background-color: transparent !important;
+					color: #333 !important;
+					opacity: .4;
+				}
+				
+				.gui-menu-section-content-group-item.gui-element-hovered {
+					border: 1px solid rgba(0, 102, 204, .45);
+					background-color: rgba(0, 102, 204, .05);
+				}
+				
+				.gui-menu-section-content-group-item.gui-element-pressed {
+					outline: none;
+					background: #06c;
+					color: #fff;
+				}
+				
+					.gui-menu-section-content-group-item-icon {
+						display: inline-block;
+						margin-right: .2rem;
+						font-size: inherit;
+						width: 14px;
+					}
+					
+					.gui-menu-section-content-group-item-title {
+					}
+
+/*
+ *	Base element
+ */
+.gui-element {
+	-webkit-box-sizing: border-box;
+	text-decoration: none;
+	position: relative;
+	line-height: 100%;
+	font-size: 14px;
+	cursor: default;
+	opacity: 1;
+}
+
+.gui-element-draggable {
+	cursor: move;
+}
+
+	/*
+	 *	Button element
+	 */
+	.gui-button {
+		-webkit-transition: background .1s,
+							color .1s ease,
+							border .1s ease,
+							box-shadow .1s ease;
+		border: 1px solid #393939;
+		background: transparent;
+		padding: .5rem .7rem;
+		border-radius: 2px;
+		position: relative;
+		color: #bbb;
+	}
+	
+	.gui-button.gui-button-zindex-fix {
+		z-index: 3;
+	}
+	
+	.gui-button.gui-element-hovered {
+		box-shadow: inset 0 1px 0 rgba(256, 256, 256, .1),
+					inset 0 -1rem 1rem 0 rgba(0, 0, 0, .1),
+					0 1px 3px rgba(0, 0, 0, .2);
+		border-color: #242424;
+		color: #ddd;
+		z-index: 2;
+	}
+	
+	.gui-button-switcher .gui-button.gui-element-switched,
+	.gui-button.gui-element-pressed {
+		box-shadow:	inset 0 1px 2px rgba(0, 0, 0, .1);
+		background: rgba(0, 0, 0, .2);
+		border-color: #222;
+		text-shadow: none;
+		color: #666;
+		z-index: 4;
+	}
+	
+	.gui-button.gui-element-disabled,
+	.gui-button.gui-element-disabled.gui-element-hovered {
+		background: rgba(0, 0, 0, .2);
+		border-color: #333;
+		text-shadow: none;
+		box-shadow: none;
+		opacity: .4;
+		color: #999;
+	}
+	
+	/*
+	 *	Button switcher element
+	 */
+	.gui-button-switcher {
+		
+	}
+	
+		.gui-button-switcher .gui-button {
+			
+		}
+		
+		.gui-button-switcher .gui-button:first-of-type {
+			
+		}
+		
+		.gui-button-switcher .gui-button:last-of-type {
+			
+		}
+		
+		/*
+		.gui-button-switcher .gui-button.gui-element-switched {
+			See below
+		}
+		*/
+	
+	/*
+	 *	Textbox element
+	 */
+	.gui-element.gui-textbox {
+		border: 1px solid #333;
+		background: #535353;
+		border-radius: 2px;
+		padding: .2rem;
+		/*margin: .2rem 0;*/
+		cursor: text;
+		font: inherit;
+		color: #ccc;
+	}
+	
+	.gui-element.gui-textbox::-webkit-input-placeholder {
+		color: rgba(0, 0, 0, .5);
+		padding: .2rem 0;
+	}
+	
+	.gui-element.gui-textbox.gui-stretch {
+		width: 100%;
+	}
+	
+	/*
+	 *	Multilist element
+	 */
+	.gui-multilist.gui-element {
+		box-shadow: inset 0 0 1rem rgba(0, 0, 0, .2);
+		border: 1px solid rgba(0, 0, 0, .6);
+		border-radius: .2rem;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		padding: .2rem;
+		display: block;
+		height: 140px;
+	}
+	
+		.gui-multilist.gui-element .gui-multilist-item {
+			border: 1px solid transparent;
+			margin-bottom: .2rem;
+			border-radius: 2px;
+			padding: .6rem;
+			display: block;
+			color: #333;
+		}
+		
+		.gui-multilist.gui-element .gui-multilist-item.gui-element-hovered {
+			border: 1px solid rgba(0, 102, 204, .45);
+			background-color: rgba(0, 102, 204, .05);
+		}
+		
+		.gui-multilist.gui-element .gui-multilist-item.gui-multilist-item-selected {
+			background-color: #06c;
+			color: white;
+		}
+	
+	/*
+	 *	Number element
+	 */
+	.gui-element.gui-input-number input {
+		box-shadow: 0 0 1px #333;
+		border-radius: 2px;
+		text-align: right;
+		padding: .2rem;
+		cursor: text;
+		border: none;
+		width: 42px;
+	}
+	
+	/*
+	 *	Context bubble
+	 */
+	.context-bubble {
+		/* -webkit-transition: -webkit-transform .2s ease, opacity .2s ease; */
+		-webkit-filter: drop-shadow(0 4px 3px rgba(0, 0, 0, .2));
+		-webkit-transform: scale(.6);
+		opacity: .6;
+		border-radius: 50%;
+		position: absolute;
+		overflow: hidden;
+		height: 250px;
+		width: 250px;
+		z-index: 9;
+	}
+	
+	.context-bubble.active {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+	
+		.context-bubble .sector {
+			
+		}
+		
+			.context-bubble .sector path {
+				-webkit-filter: drop-shadow(-5px -5px 5px #000);
+				-webkit-transition: fill .1s ease;
+				stroke: #999;
+				fill: #eee;
+			}
+			
+			.context-bubble .sector text {
+				-webkit-transition: fill .1s ease;
+				text-anchor: middle;
+				font-size: 14px;
+			}
+			
+				.context-bubble .sector:hover path {
+					fill: #06c;
+				}
+				
+				.context-bubble .sector:hover text {
+					fill: white;
+				}
